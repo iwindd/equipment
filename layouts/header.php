@@ -66,6 +66,7 @@
     <li><a href="departments.php">ฝ่าย/งาน</a></li>
     <li><a href="works.php">งาน</a></li>
     <li><a href="locations.php">สถานที่</a></li>
+    <li><a href="serials.php">หมายเลข</a></li>
     <li><a href="auth/logout.php">ออกจากระบบ</a></li>
   </ul>
 </div>
