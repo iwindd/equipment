@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       </tr>
       <tr>
         <td><label for="value">หมายเลข</label></td>
-        <td><input type="text" name="value" id="value" required></td>
+        <td><input type="text" placeholder="หมายเลข" name="value" id="value" required></td>
       </tr>
       <tr>
         <td><label for="title">ชื่อ</label></td>
-        <td><input type="text" name="title" id="title" required></td>
+        <td><input type="text" placeholder="ชื่อ" name="title" id="title" required></td>
       </tr>
       <tr>
         <td colspan="2"><button type="submit">เพิ่มรายการ</button></td>
