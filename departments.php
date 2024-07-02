@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . "/layouts/header.php"; ?>
 <header style="width: 100%; display: flex; justify-content:space-between;">
   <h1>ฝ่าย/งาน</h1>
-  <button class="btn btn-primary">เพิ่มฝ่าย/งาน</button>
+  <a class="btn btn-primary" href="departments_add.php">เพิ่มฝ่าย/งาน</a>
 </header>
 <hr>
 <article>
@@ -25,9 +25,9 @@
           <tr>
             <td><?= $row['id']?></td>
             <td><?= $row['title']?></td>
-            <td>
-              <a href="#" class="btn btn-primary">แก้ไข</a>
-              <a href="#" class="btn btn-danger">ลบ</a>
+            <td >
+              <a href="departments_edit.php?id=<?=$row['id']?>" class="btn btn-primary">แก้ไข</a>
+              <a href="departments_remove.php?id=<?=$row['id']?>" class="btn btn-danger">ลบ</a>
             </td>
           </tr>
         <?php } ?>
