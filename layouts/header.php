@@ -1,4 +1,5 @@
 <?php  require_once __DIR__."/../includes/db.php"; ?>
+<?php  require_once __DIR__."/../guards/AuthGuard.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +70,7 @@
   <hr>
   <ul>
     <li><a href="#">ครุภัณฑ์</a></li>
-    <li><a href="#">ออกจากระบบ</a></li>
+    <li><a href="auth/logout.php">ออกจากระบบ</a></li>
   </ul>
 </div>
 
