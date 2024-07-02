@@ -50,6 +50,7 @@
     .wrapper{
       flex-grow: 1;
       padding: 1em;
+      overflow-y: auto;
     }
   </style>
 </head>
