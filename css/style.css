@@ -1,0 +1,9 @@
+:root{
+  --nav-bg: #1e1b4b;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

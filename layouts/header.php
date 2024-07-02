@@ -7,18 +7,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=
   , initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Equipments</title>
   <style>
-    :root{
-      --nav-bg: #1e1b4b;
-    }
-
-    *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
     body{
       display: flex;
       height: 100vh;
