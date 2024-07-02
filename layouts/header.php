@@ -30,6 +30,7 @@
     }
 
     .nav hr{
+      margin-top: 0em;
       margin-bottom: 1em;
     }
 
