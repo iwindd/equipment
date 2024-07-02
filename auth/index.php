@@ -27,10 +27,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 </head>
 <body>
   <form method="post">
-    <h1>Login</h1>
-    <input type="text" name="username" id="username" placeholder="username">
-    <input type="password" name="password" id="password" placeholder="password">
-    <button type="submit">Submit</button>
+    <table>
+      <caption>Login</caption>
+      <tr>
+        <td><input type="text" name="username" id="username" placeholder="username"></td>
+      </tr>
+      <tr>
+        <td><input type="password" name="password" id="password" placeholder="password"></td>
+      </tr>
+      <tr>
+        <td><button type="submit">Submit</button></td>
+      </tr>
+    </table>
   </form>
 </body>
 </html>
