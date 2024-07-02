@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET"){
 
 ?>
 <header style="width: 100%; display: flex; justify-content:space-between;">
-  <h1>เพิ่มครุภัณฑ์</h1>
+  <h1>แก้ไขครุภัณฑ์</h1>
 </header>
 <hr>
 <article>
