@@ -7,7 +7,7 @@
 <article>
   <?php
 
-  $stmt = $conn->prepare("SELECT equipments.id, equipments.code1, equipments.code2, equipments.code3, equipments.code4, equipments.code5, equipments.title, equipments.status, works.title as w_title, departments.title as d_title, locations.title as l_title FROM equipments LEFT JOIN works ON equipments.work_id = works.id LEFT JOIN departments ON works.department_id = departments.id LEFT JOIN locations ON equipments.location_id = locations.id");
+  $stmt = $conn->prepare("SELECT equipments.id, equipments.code5, equipments.title, equipments.status, works.title as w_title, departments.title as d_title, locations.title as l_title, s1.value as code1, s2.value as code2, s3.value as code3, s4.value as code4 FROM equipments LEFT JOIN works ON equipments.work_id = works.id LEFT JOIN departments ON works.department_id = departments.id LEFT JOIN locations ON equipments.location_id = locations.id LEFT JOIN serials s1 ON equipments.code1 = s1.id LEFT JOIN serials s2 ON equipments.code2 = s2.id LEFT JOIN serials s3 ON equipments.code3 = s3.id LEFT JOIN serials s4 ON equipments.code4 = s4.id");
   $stmt->execute();
 
   ?>

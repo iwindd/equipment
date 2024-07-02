@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET"){
       </tr>
       <tr>
         <td><label for="value">หมายเลข</label></td>
-        <td><input type="number" value="<?=$data['value']?>" name="value" id="value" required></td>
+        <td><input type="text" value="<?=$data['value']?>" name="value" id="value" required></td>
       </tr>
       <tr>
         <td><label for="title">ชื่อ</label></td>
