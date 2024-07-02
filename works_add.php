@@ -19,17 +19,29 @@ $stmt->execute();
 <hr>
 <article>
   <form method="post">
-    <select name="department" id="department">
-      <?php if ($stmt->rowCount() > 0) { ?>
-        <?php foreach ($stmt->fetchAll() as $row) { ?>
-          <option value="<?=$row['id']?>"><?=$row['title']?></option>
-        <?php } ?>
-      <?php } else { ?>
-        <option value="0">กรุณาเพิ่มฝ่าย/งาน</option>
-      <?php } ?>
-    </select>
-    <input type="text" name="work" id="work">
-    <button type="submit">เพิ่มรายการ</button>
+    <table>
+      <tr>
+        <td><label for="department">แผนก</label></td>
+        <td>
+          <select name="department" id="department">
+            <?php if ($stmt->rowCount() > 0) { ?>
+              <?php foreach ($stmt->fetchAll() as $row) { ?>
+                <option value="<?= $row['id'] ?>"><?= $row['title'] ?></option>
+              <?php } ?>
+            <?php } else { ?>
+              <option value="0">กรุณาเพิ่มฝ่าย/งาน</option>
+            <?php } ?>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="work">งาน</label></td>
+        <td><input placeholder="งาน" type="text" name="work" id="work"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">เพิ่มรายการ</button></td>
+      </tr>
+    </table>
   </form>
 </article>
 <?php require_once __DIR__ . "/layouts/footer.php"; ?>

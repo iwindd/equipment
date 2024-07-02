@@ -7,11 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $stmt->bindParam(':did', $_POST['department']);
   $stmt->execute();
 
-  header("Location: works.php"); 
+  header("Location: works.php");
 }
 
-if ($_SERVER['REQUEST_METHOD'] == "GET"){
-  if (!isset($_GET['id'])){
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+  if (!isset($_GET['id'])) {
     header("Location: works.php");
   }
 
@@ -35,18 +35,31 @@ $stmt->execute();
 <hr>
 <article>
   <form method="post">
-    <input type="hidden" value="<?=$data['id']?>" name="id">
-    <select name="department" id="department">
-      <?php if ($stmt->rowCount() > 0) { ?>
-        <?php foreach ($stmt->fetchAll() as $row) { ?>
-          <option value="<?=$row['id']?>" <?=$row['id'] == $data['department_id'] ? 'selected="true"': ""?>><?=$row['title']?></option>
-        <?php } ?>
-      <?php } else { ?>
-        <option value="0">กรุณาเพิ่มฝ่าย/งาน</option>
-      <?php } ?>
-    </select>
-    <input type="text" value="<?=$data['title']?>" name="work" id="work">
-    <button type="submit">บันทึก</button>
+    <input type="hidden" value="<?= $data['id'] ?>" name="id">
+    <table>
+      <tr>
+        <td><label for="department">แผนก</label></td>
+        <td>
+          <select name="department" id="department">
+            <?php if ($stmt->rowCount() > 0) { ?>
+              <?php foreach ($stmt->fetchAll() as $row) { ?>
+                <option value="<?= $row['id'] ?>" <?= $row['id'] == $data['department_id'] ? 'selected="true"' : "" ?>><?= $row['title'] ?></option>
+              <?php } ?>
+            <?php } else { ?>
+              <option value="0">กรุณาเพิ่มฝ่าย/งาน</option>
+            <?php } ?>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="work">งาน</label></td>
+        <td><input type="text" value="<?= $data['title'] ?>" name="work" id="work"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">บันทึก</button></td>
+      </tr>
+    </table>
+    
   </form>
 </article>
 <?php require_once __DIR__ . "/layouts/footer.php"; ?>
